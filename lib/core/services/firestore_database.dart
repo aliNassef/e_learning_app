@@ -63,23 +63,51 @@ class FirestoreService {
     await paymentDoc.set(payment);
   }
 
-  // /// Get lessons for a course
-  // Future<List<Map<String, dynamic>>> getLessons(String courseId) async {
-  //   final lessonsSnapshot = await _firestore
-  //       .collection(Endpoints.courses)
-  //       .doc(courseId)
-  //       .collection(Endpoints.lessons)
-  //       .orderBy('order')
-  //       .get();
+  Future<List<Map<String, dynamic>>> getCourses() async {
+    final querySnapshot = await _firestore.collection(Endpoints.courses).get();
+    return querySnapshot.docs.map((doc) => doc.data()).toList();
+  }
 
-  //   return [];
-  //   // return lessonsSnapshot.docs
-  //   //     .map((doc) => LessonModel(
-  //   //           lessonId: doc.id,
-  //           title: doc['title'],
-  //           contentUrl: doc['contentUrl'],
-  //           order: doc['order'],
-  //           createdAt: (doc['createdAt'] as Timestamp).toDate(),
-  //         ))
-  //     .toList();
+  /// Fetch all lessons for a specific course
+  Future<List<Map<String, dynamic>>> getLessons(String courseId) async {
+    final querySnapshot = await _firestore
+        .collection(Endpoints.courses)
+        .doc(courseId)
+        .collection(Endpoints.lessons)
+        .get();
+    return querySnapshot.docs.map((doc) => doc.data()).toList();
+  }
+
+  /// Fetch user progress for all lessons
+  Future<List<Map<String, dynamic>>> getUserProgress(String userId) async {
+    final querySnapshot = await _firestore
+        .collection(Endpoints.users)
+        .doc(userId)
+        .collection(Endpoints.progress)
+        .get();
+    return querySnapshot.docs.map((doc) => doc.data()).toList();
+  }
+
+  /// Fetch all quizzes for a course
+  Future<List<Map<String, dynamic>>> getQuizzes(String courseId) async {
+    final querySnapshot = await _firestore
+        .collection(Endpoints.courses)
+        .doc(courseId)
+        .collection(Endpoints.quizes)
+        .get();
+    return querySnapshot.docs.map((doc) => doc.data()).toList();
+  }
+
+  /// Fetch all questions for a specific quiz
+  Future<List<Map<String, dynamic>>> getQuestions(
+      String courseId, String quizId) async {
+    final querySnapshot = await _firestore
+        .collection(Endpoints.courses)
+        .doc(courseId)
+        .collection(Endpoints.quizes)
+        .doc(quizId)
+        .collection(Endpoints.questions)
+        .get();
+    return querySnapshot.docs.map((doc) => doc.data()).toList();
+  }
 }

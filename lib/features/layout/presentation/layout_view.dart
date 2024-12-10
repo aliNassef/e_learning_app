@@ -1,6 +1,6 @@
+import 'package:e_learning_app/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
 import '../../../core/utils/app_color.dart';
 
 class LayoutView extends StatefulWidget {
@@ -15,11 +15,9 @@ class _LayoutViewState extends State<LayoutView> {
   int _page = 0;
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   List<Widget> buildScreens = [
+    const HomeView(),
     Container(
-      color: AppColors.primaryColor,
-    ),
-    Container(
-      color: AppColors.lightsecondaryColor,
+      color: AppColors.secondaryColor,
     ),
     Container(
       color: AppColors.secondaryColor,
