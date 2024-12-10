@@ -1,18 +1,18 @@
 import '../../domain/entity/review_entity.dart';
 
 class ReviewModel {
-  final String name;
-  final String img;
-  final String date;
-  final double rate;
-  final String comment;
+  final String? name;
+  final String? img;
+  final String? date;
+  final double? rate;
+  final String? comment;
 
   ReviewModel({
-    required this.name,
-    required this.img,
-    required this.date,
-    required this.rate,
-    required this.comment,
+    this.name,
+    this.img,
+    this.date,
+    this.rate,
+    this.comment,
   });
 
   factory ReviewModel.fromMap(Map<String, dynamic> map) {
@@ -54,11 +54,11 @@ class ReviewModel {
 
   ReviewEntity toEntity() {
     return ReviewEntity(
-      name: name,
-      img: img,
-      date: date,
-      rate: rate,
-      comment: comment,
+      name: name ?? '',
+      img: img ?? '',
+      date: date ?? '',
+      rate: rate ?? 0,
+      comment: comment ?? '',
     );
   }
 }

@@ -29,7 +29,7 @@ Future<void> setupServiceLocator() async {
       firestoreService: injector<FirestoreService>(),
     ),
   );
-  injector.registerSingleton<HomeRepo>(
+  injector.registerSingleton<HomeRepoImpl>(
     HomeRepoImpl(
       homeSource: injector<HomeSource>(),
     ),

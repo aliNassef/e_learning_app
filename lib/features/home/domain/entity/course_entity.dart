@@ -9,9 +9,9 @@ class CourseEntity {
   final String thumnailUrl;
   final String price;
   final String discount;
-  final List<ReviewEntity> reviewEntity;
+  final List<ReviewEntity>? reviewEntity;
   CourseEntity({
-    required this.reviewEntity,
+    this.reviewEntity,
     required this.price,
     required this.discount,
     required this.courseCode,

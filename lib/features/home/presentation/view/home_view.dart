@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
         child: BlocProvider(
           create: (context) => HomeCubit(
             injector<HomeRepoImpl>(),
-          ),
+          )..getCourses(),
           child: const HomeViewBody(),
         ),
       ),

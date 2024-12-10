@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:e_learning_app/core/errors/failure.dart';
 import 'package:e_learning_app/features/home/data/source/home_source.dart';
@@ -12,6 +13,7 @@ class HomeRepoImpl extends HomeRepo {
   Future<Either<Failure, List<CourseEntity>>> getCourses() async {
     try {
       final courses = await homeSource.getCourses();
+      log(courses.toString());
       List<CourseEntity> courseEntities =
           courses.map((e) => e.toEntity()).toList();
       return right(courseEntities);

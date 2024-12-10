@@ -46,7 +46,7 @@ class CourseModel {
   factory CourseModel.fromMap(Map<String, dynamic> map) {
     return CourseModel(
       reviews:
-          map['reviews']?.map((e) => ReviewModel.fromMap(e)).toList() ?? [],
+          map['reviews'] != null ? List<ReviewModel>.from(map['reviews']) : [],
       courseId: map['courseId'] ?? '',
       title: map['title'] ?? '',
       description: map['description'] ?? '',
@@ -75,7 +75,8 @@ class CourseModel {
   factory CourseModel.fromEntity(CourseEntity course) {
     return CourseModel(
       reviews:
-          course.reviewEntity.map((e) => ReviewModel.fromEntity(e)).toList(),
+          course.reviewEntity?.map((e) => ReviewModel.fromEntity(e)).toList() ??
+              [],
       courseId: course.courseCode,
       title: course.courseTitle,
       description: course.courseDescription,

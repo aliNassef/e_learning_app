@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:e_learning_app/core/errors/error_model.dart';
 import 'package:e_learning_app/core/errors/exceptions.dart';
 
@@ -12,11 +14,13 @@ class HomeSource {
   Future<List<CourseModel>> getCourses() async {
     try {
       final response = await firestoreService.getCourses();
+      log(response.toString());
       List<CourseModel> courses = response
           .map(
             (e) => CourseModel.fromMap(e),
           )
           .toList();
+      log(courses.toString());
       return courses;
     } catch (e) {
       throw ServerException(
