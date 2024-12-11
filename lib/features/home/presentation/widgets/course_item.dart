@@ -22,8 +22,9 @@ class CourseItem extends StatelessWidget {
       child: Row(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(8),
             child: SizedBox(
+              height: 120.h,
               width: 120.w,
               child: CustomNetworkImage(
                 img: course.thumnailUrl,

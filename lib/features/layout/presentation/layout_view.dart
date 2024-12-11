@@ -1,6 +1,7 @@
 import 'package:e_learning_app/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter_lazy_indexed_stack/flutter_lazy_indexed_stack.dart';
 import '../../../core/utils/app_color.dart';
 
 class LayoutView extends StatefulWidget {
@@ -23,9 +24,6 @@ class _LayoutViewState extends State<LayoutView> {
       color: AppColors.secondaryColor,
     ),
   ];
-  Widget buildScreen(int index) {
-    return buildScreens[index];
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +32,18 @@ class _LayoutViewState extends State<LayoutView> {
         key: _bottomNavigationKey,
         height: kBottomNavigationBarHeight,
         backgroundColor: AppColors.primaryColor,
-        items: const [
-          Icon(Icons.add, size: 30),
-          Icon(Icons.list, size: 30),
-          Icon(Icons.compare_arrows, size: 30),
+        items: [
+          Icon(
+            Icons.home,
+            size: 30,
+            color: _page != 0 ? Colors.black : AppColors.primaryColor,
+          ),
+          const Icon(Icons.list, size: 30),
+          Icon(
+            Icons.person,
+            size: 30,
+            color: _page != 2 ? Colors.black : AppColors.primaryColor,
+          ),
         ],
         onTap: (index) {
           setState(() {
@@ -45,7 +51,10 @@ class _LayoutViewState extends State<LayoutView> {
           });
         },
       ),
-      body: buildScreen(_page),
+      body: LazyIndexedStack(
+        index: _page,
+        children: buildScreens,
+      ),
     );
   }
 }

@@ -8,9 +8,13 @@ class CustomNetworkImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CachedNetworkImage(
       imageUrl: img,
+      fit: BoxFit.fill,
       errorWidget: (_, __, ___) => const Icon(Icons.error),
-      placeholder: (_, __) => const Center(
-        child: CircularProgressIndicator(),
+      placeholder: (_, __) => const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
       ),
     );
   }
