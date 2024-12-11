@@ -29,6 +29,7 @@ class _LayoutViewState extends State<LayoutView> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
+        
         key: _bottomNavigationKey,
         height: kBottomNavigationBarHeight,
         backgroundColor: AppColors.primaryColor,
