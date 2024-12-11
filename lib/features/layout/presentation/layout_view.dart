@@ -38,7 +38,11 @@ class _LayoutViewState extends State<LayoutView> {
             size: 30,
             color: _page != 0 ? Colors.black : AppColors.primaryColor,
           ),
-          const Icon(Icons.list, size: 30),
+          Icon(
+            Icons.list,
+            size: 30,
+            color: _page != 1 ? Colors.black : AppColors.primaryColor,
+          ),
           Icon(
             Icons.person,
             size: 30,
