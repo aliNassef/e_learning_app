@@ -1,4 +1,4 @@
-import 'package:e_learning_app/features/home/domain/entity/course_entity.dart';
+import 'package:e_learning_app/core/entity/course_entity.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/course_details/presentation/view/course_details_view.dart';

@@ -1,4 +1,4 @@
-import '../../domain/entity/review_entity.dart';
+import '../entity/review_entity.dart';
 
 class ReviewModel {
   final String? name;

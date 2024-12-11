@@ -2,7 +2,7 @@ import 'package:e_learning_app/core/extensions/mediaquery_size.dart';
 import 'package:e_learning_app/core/shared/widgets/custom_network_image.dart';
 import 'package:e_learning_app/core/utils/app_constants.dart';
 import 'package:e_learning_app/core/utils/app_styles.dart';
-import 'package:e_learning_app/features/home/domain/entity/course_entity.dart';
+import 'package:e_learning_app/core/entity/course_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

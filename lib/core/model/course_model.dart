@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../domain/entity/course_entity.dart';
+import '../entity/course_entity.dart';
 import 'review_model.dart';
 
 class CourseModel {

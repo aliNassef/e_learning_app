@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:e_learning_app/core/errors/failure.dart';
 import 'package:e_learning_app/features/home/data/source/home_source.dart';
-import 'package:e_learning_app/features/home/domain/entity/course_entity.dart';
+import 'package:e_learning_app/core/entity/course_entity.dart';
 import 'package:e_learning_app/features/home/domain/repo/home_repo.dart';
 
 class HomeRepoImpl extends HomeRepo {

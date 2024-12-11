@@ -2,7 +2,7 @@ import 'package:e_learning_app/core/shared/widgets/custom_network_image.dart';
 import 'package:e_learning_app/core/shared/widgets/spacers.dart';
 import 'package:e_learning_app/core/utils/app_color.dart';
 import 'package:e_learning_app/features/course_details/presentation/view/course_details_view.dart';
-import 'package:e_learning_app/features/home/domain/entity/course_entity.dart';
+import 'package:e_learning_app/core/entity/course_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

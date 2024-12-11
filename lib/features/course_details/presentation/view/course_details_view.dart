@@ -1,5 +1,5 @@
 import 'package:e_learning_app/core/shared/widgets/custom_app_bar.dart';
-import 'package:e_learning_app/features/home/domain/entity/course_entity.dart';
+import 'package:e_learning_app/core/entity/course_entity.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/course_details_view_body.dart';
