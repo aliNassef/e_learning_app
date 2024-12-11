@@ -1,4 +1,4 @@
-import 'package:e_learning_app/features/home/presentation/view/home_view.dart';
+import '../../home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_lazy_indexed_stack/flutter_lazy_indexed_stack.dart';

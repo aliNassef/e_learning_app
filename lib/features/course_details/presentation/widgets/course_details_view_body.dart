@@ -1,10 +1,10 @@
-import 'package:e_learning_app/core/extensions/mediaquery_size.dart';
-import 'package:e_learning_app/core/shared/widgets/custom_network_image.dart';
-import 'package:e_learning_app/core/shared/widgets/default_app_button.dart';
-import 'package:e_learning_app/core/utils/app_constants.dart';
-import 'package:e_learning_app/core/utils/app_styles.dart';
-import 'package:e_learning_app/core/entity/course_entity.dart';
-import 'package:e_learning_app/features/course_details/presentation/widgets/custom_list_tile.dart';
+import '../../../../core/extensions/mediaquery_size.dart';
+import '../../../../core/shared/widgets/custom_network_image.dart';
+import '../../../../core/shared/widgets/default_app_button.dart';
+import '../../../../core/utils/app_constants.dart';
+import '../../../../core/utils/app_styles.dart';
+import '../../../../core/entity/course_entity.dart';
+import 'custom_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:readmore/readmore.dart';

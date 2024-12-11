@@ -1,9 +1,9 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:e_learning_app/core/cache/cache_helper.dart';
-import 'package:e_learning_app/core/services/service_locator.dart';
-import 'package:e_learning_app/core/utils/app_color.dart';
-import 'package:e_learning_app/features/layout/presentation/layout_view.dart';
-import 'package:e_learning_app/firebase_options.dart';
+import 'core/cache/cache_helper.dart';
+import 'core/services/service_locator.dart';
+import 'core/utils/app_color.dart';
+import 'features/layout/presentation/layout_view.dart';
+import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

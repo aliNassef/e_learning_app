@@ -1,6 +1,6 @@
-import 'package:e_learning_app/features/home/domain/repo/home_repo.dart';
+import '../../../domain/repo/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:e_learning_app/core/entity/course_entity.dart';
+import '../../../../../core/entity/course_entity.dart';
 import 'package:meta/meta.dart';
 part 'home_state.dart';
 

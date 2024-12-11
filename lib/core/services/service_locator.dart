@@ -1,5 +1,5 @@
-import 'package:e_learning_app/features/home/data/repo/course_repo_impl.dart';
-import 'package:e_learning_app/features/home/data/source/home_source.dart';
+import '../../features/home/data/repo/course_repo_impl.dart';
+import '../../features/home/data/source/home_source.dart';
 
 import '../repos/image_repo/image_rep_impl.dart';
 import '../repos/image_repo/image_repo.dart';

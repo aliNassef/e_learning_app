@@ -1,7 +1,7 @@
-import 'package:e_learning_app/core/shared/widgets/custom_app_bar.dart';
-import 'package:e_learning_app/core/entity/course_entity.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/entity/course_entity.dart';
+import '../../../../core/shared/widgets/custom_app_bar.dart';
 import '../widgets/course_details_view_body.dart';
 
 class CourseDetailsView extends StatelessWidget {

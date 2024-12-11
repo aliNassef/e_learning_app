@@ -1,5 +1,5 @@
-import 'package:e_learning_app/core/shared/functions/dummy_data.dart';
-import 'package:e_learning_app/features/home/presentation/manger/home_cubit/home_cubit.dart';
+import '../../../../core/shared/functions/dummy_data.dart';
+import '../manger/home_cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

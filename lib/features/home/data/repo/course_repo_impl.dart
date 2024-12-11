@@ -1,9 +1,9 @@
 import 'dart:developer';
 import 'package:dartz/dartz.dart';
-import 'package:e_learning_app/core/errors/failure.dart';
-import 'package:e_learning_app/features/home/data/source/home_source.dart';
-import 'package:e_learning_app/core/entity/course_entity.dart';
-import 'package:e_learning_app/features/home/domain/repo/home_repo.dart';
+import '../../../../core/errors/failure.dart';
+import '../source/home_source.dart';
+import '../../../../core/entity/course_entity.dart';
+import '../../domain/repo/home_repo.dart';
 
 class HomeRepoImpl extends HomeRepo {
   final HomeSource homeSource;

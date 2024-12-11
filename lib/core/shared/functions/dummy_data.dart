@@ -1,4 +1,4 @@
-import 'package:e_learning_app/core/entity/course_entity.dart';
+import '../../entity/course_entity.dart';
 
 CourseEntity dummyCourseEntity() {
   return CourseEntity(

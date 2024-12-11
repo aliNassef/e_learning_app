@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:e_learning_app/core/errors/error_model.dart';
-import 'package:e_learning_app/core/errors/exceptions.dart';
+import '../../../../core/errors/error_model.dart';
+import '../../../../core/errors/exceptions.dart';
 
 import '../../../../core/services/firestore_database.dart';
 import '../../../../core/model/course_model.dart';
