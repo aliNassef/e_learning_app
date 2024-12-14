@@ -4,6 +4,7 @@ import '../../../../core/shared/widgets/default_app_button.dart';
 import '../../../../core/utils/app_constants.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../core/entity/course_entity.dart';
+import '../view/course_content_view.dart';
 import 'custom_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -107,7 +108,15 @@ class CourseDetailsViewBody extends StatelessWidget {
                   ],
                 ),
                 const VerticalSpace(20),
-                const CustomListTile(),
+                CustomListTile(
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      CourseContentView.routeName,
+                      arguments: course.courseCode,
+                    );
+                  },
+                ),
                 const VerticalSpace(24),
                 const DefaultAppButton(
                   text: 'Enroll Now',

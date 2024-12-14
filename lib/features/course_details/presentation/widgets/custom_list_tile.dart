@@ -1,4 +1,3 @@
-
 import '../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,8 +7,9 @@ import '../../../../core/utils/app_color.dart';
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,
+    this.onTap,
   });
-
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +31,7 @@ class CustomListTile extends StatelessWidget {
           'Intro',
           style: AppStyles.textStyle12SB,
         ),
-        onTap: () {},
+        onTap: onTap,
         subtitle: Text(
           'take a look at course content',
           style: AppStyles.textStyle10R,

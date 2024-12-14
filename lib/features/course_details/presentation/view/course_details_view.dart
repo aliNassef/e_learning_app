@@ -1,7 +1,11 @@
+import 'package:e_learning_app/features/course_details/data/repo/course_details_repo_impl.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/entity/course_entity.dart';
+import '../../../../core/services/service_locator.dart';
 import '../../../../core/shared/widgets/custom_app_bar.dart';
+import '../manger/course_details_cubit/course_details_cubit.dart';
 import '../widgets/course_details_view_body.dart';
 
 class CourseDetailsView extends StatelessWidget {
@@ -16,8 +20,13 @@ class CourseDetailsView extends StatelessWidget {
         hasLeading: true,
       ),
       body: SafeArea(
-        child: CourseDetailsViewBody(
-          course: course,
+        child: BlocProvider(
+          create: (context) => CourseDetailsCubit(
+            injector<CourseDetailsRepoImpl>(),
+          ),
+          child: CourseDetailsViewBody(
+            course: course,
+          ),
         ),
       ),
     );

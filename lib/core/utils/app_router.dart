@@ -1,3 +1,4 @@
+import '../../features/course_details/presentation/view/course_content_view.dart';
 import '../entity/course_entity.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,15 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
           final course = settings.arguments as CourseEntity;
           return CourseDetailsView(
             course: course,
+          );
+        },
+      );
+    case CourseContentView.routeName:
+      return MaterialPageRoute(
+        builder: (_) {
+          final courseId = settings.arguments as String;
+          return CourseContentView(
+            courseId: courseId,
           );
         },
       );

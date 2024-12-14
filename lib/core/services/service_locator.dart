@@ -1,3 +1,6 @@
+import 'package:e_learning_app/features/course_details/data/repo/course_details_repo_impl.dart';
+import 'package:e_learning_app/features/course_details/data/source/course_details_source.dart';
+
 import '../../features/home/data/repo/course_repo_impl.dart';
 import '../../features/home/data/source/home_source.dart';
 
@@ -31,6 +34,17 @@ Future<void> setupServiceLocator() async {
   injector.registerSingleton<HomeRepoImpl>(
     HomeRepoImpl(
       homeSource: injector<HomeSource>(),
+    ),
+  );
+
+  injector.registerSingleton<CourseDetailsSource>(
+    CourseDetailsSource(
+      firestoreService: injector<FirestoreService>(),
+    ),
+  );
+  injector.registerSingleton<CourseDetailsRepoImpl>(
+    CourseDetailsRepoImpl(
+      courseDetailsSource: injector<CourseDetailsSource>(),
     ),
   );
 }
