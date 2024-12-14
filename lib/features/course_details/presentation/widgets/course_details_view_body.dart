@@ -109,6 +109,8 @@ class CourseDetailsViewBody extends StatelessWidget {
                 ),
                 const VerticalSpace(20),
                 CustomListTile(
+                  title: 'Intro',
+                  subTitle: 'take a look at course content',
                   onTap: () {
                     Navigator.pushNamed(
                       context,

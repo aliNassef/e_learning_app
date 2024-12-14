@@ -1,4 +1,5 @@
 import 'package:e_learning_app/core/services/service_locator.dart';
+import 'package:e_learning_app/core/shared/widgets/custom_app_bar.dart';
 import 'package:e_learning_app/features/course_details/data/repo/course_details_repo_impl.dart';
 import 'package:e_learning_app/features/course_details/presentation/manger/course_details_cubit/course_details_cubit.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,10 @@ class CourseContentView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const CustomAppBar(
+        title: 'Course Content',
+        hasLeading: true,
+      ),
       body: BlocProvider(
         create: (context) => CourseDetailsCubit(
           injector<CourseDetailsRepoImpl>(),

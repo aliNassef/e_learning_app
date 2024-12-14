@@ -8,8 +8,12 @@ class CustomListTile extends StatelessWidget {
   const CustomListTile({
     super.key,
     this.onTap,
+    required this.title,
+    required this.subTitle,
   });
   final void Function()? onTap;
+  final String title;
+  final String subTitle;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,12 +32,12 @@ class CustomListTile extends StatelessWidget {
           color: AppColors.primaryColor,
         ),
         title: Text(
-          'Intro',
+          title,
           style: AppStyles.textStyle12SB,
         ),
         onTap: onTap,
         subtitle: Text(
-          'take a look at course content',
+          subTitle,
           style: AppStyles.textStyle10R,
         ),
       ),
